@@ -1,4 +1,4 @@
-<?php 
+<?php
     include('header.php');
     include('imgside.php');
     ?>
@@ -27,7 +27,7 @@
             </div>
         </center>
     </div>
-   
-      <?php 
+
+      <?php
                 include("footer.php");
       ?>

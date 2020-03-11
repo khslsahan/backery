@@ -7,21 +7,21 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images\home1.jpg" class="d-block w-100" style="height: 600px; width: 80%;">
+                    <img src="images\home1.jpg" class="d-block w-100" style="height: 400px; width: 80%;">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Pastry Items</h3>
                         <p style="color:black;font-size:30px">The real tasty Pastry items whenever it made...! </p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images\home2.jpg" class="d-block w-100" style="height: 600px; width: 80%;">
+                    <img src="images\home2.jpg" class="d-block w-100" style="height: 400px; width: 80%;">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Bakery Items</h3>
                         <p style="color:black;font-size:30px">We always ready to provide the best foods whenever you need...!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images\home3.jpg" class="d-block w-100" style="height: 600px; width: 80%;">
+                    <img src="images\home3.jpg" class="d-block w-100" style="height: 400px; width: 80%;">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Cakes for events</h3>
                         <p style="color:black;font-size:30px">We produce different kinds of delicious cakes to make your events to unforgetable memories...!!!</p>
