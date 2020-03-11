@@ -18,7 +18,7 @@
 		lname varchar(30) NOT NULL,
 		email varchar(30) NOT NULL,
 		contact_no varchar(10),
-		password varchar(40) NOT NULL,
+		password varchar(50) NOT NULL,
 		role varchar(20) NOT NULL, PRIMARY KEY(userid)
 	)";
 	$tblusr=mysqli_query($conn,$query) or die ('cannot create table user'.mysqli_error($conn));
