@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class=" jumbotron" style=" background: #2493d3 ">
+    <div class=" jumbotron" style=" background: #130f40 ">
         <div class="signin-up">
             <a href="signup.php"><button type="button" class="btn btn-outline-warning">Sign Up</button></a>
             <a href="login.php"><button type="button" class="btn btn-outline-warning">Login</button></a>

@@ -9,17 +9,13 @@
   <div class="form-row">
     <div class="col-md-4 mb-4">
       <label for="validationServer01">First name</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" name="fname" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
+      <input type="text" class="form-control" id="validationServer01" placeholder="First name" name="fname" required>
+
     </div>
     <div class="col-md-4 mb-4">
       <label for="validationServer02">Last name</label>
-      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" name="lname" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
+      <input type="text" class="form-control" id="validationServer02" placeholder="Last name" name="lname" required>
+
     </div>
     <div class="col-md-4 mb-4">
       <label for="validationServerUsername">Email</label>
@@ -27,27 +23,21 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
-        <input type="text" class="form-control is-invalid" id="validationServerUsername" name="email" placeholder="email" aria-describedby="inputGroupPrepend3" required>
-        <div class="invalid-feedback">
-          Please choose a valid email.
-        </div>
+        <input type="text" class="form-control" id="validationServerUsername" name="email" placeholder="email" aria-describedby="inputGroupPrepend3" required>
+
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-4">
       <label for="validationServer03">Contact no</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Contact No" name="contact_no" required>
-      <div class="invalid-feedback">
-        Please provide a valid contact number.
-      </div>
+      <input type="text" class="form-control" id="validationServer03" placeholder="Contact No" name="contact_no" required>
+
     </div>
     <div class="col-md-4 mb-4">
       <label for="validationServer04">Password</label>
-      <input type="password" class="form-control is-invalid" id="validationServer04" placeholder="password" name="password" required>
-      <div class="invalid-feedback">
-        Please provide a valid password.
-      </div>
+      <input type="password" class="form-control" id="validationServer04" placeholder="password" name="password" required>
+      
     </div>
     <div class="col-md-4 mb-4">
       <label for="validationServer05">Role</label>
@@ -59,13 +49,11 @@
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+      <input type="checkbox" value="" id="invalidCheck3" required>
       <label class="form-check-label" for="invalidCheck3">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
+
     </div>
   </div>
   <button class="btn btn-primary" type="submit" name="submit">login</button>

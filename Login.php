@@ -4,7 +4,7 @@
 
  <h1 style="text-align:center">Login</h1>
 <center>
-<div class="box-login" style="width:40%">
+<div class="box-login col-md-4 col-md-3">
 <form action="Login.php" method="post">
 <div class="form-group">
  <label for="exampleInputEmail1">Email address</label>
