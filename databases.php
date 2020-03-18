@@ -24,7 +24,7 @@
 	$tblusr=mysqli_query($conn,$query) or die ('cannot create table user'.mysqli_error($conn));
 	$query="CREATE TABLE IF NOT EXISTS food
 	(
-		foodid char(4) PRIMARY KEY,
+		foodid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		foodname varchar(30) NOT NULL,
 		catogory varchar(30) NOT NULL,
 		quantity int NOT NULL,

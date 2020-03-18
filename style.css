@@ -23,8 +23,12 @@
 }
 body
 {
-  background-color:#e4cc1f;
+  background-color:#f6e58d;
 
+}
+h1
+{
+  text-align: center;
 }
 .map
 {
@@ -33,7 +37,7 @@ body
 .footer
 {
   width: 100%;
-  background-color: #00121b;
+  background-color: #130f40;
   display:block;
 }
 .inner-footer
@@ -150,6 +154,12 @@ li i
 {
   border:2px solid #2493d3;
   text-align:center;
+  size:col-md-3 mb-3;
+  padding:50px;
+}
+.box-Items
+{
+  border:2px solid #2493d3;
   size:col-md-3 mb-3;
   padding:50px;
 }
