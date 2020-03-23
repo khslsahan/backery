@@ -1,4 +1,5 @@
-<div class="slider-area">
+<center>
+<div class="slider-area col-md-10   col-sm-12">
         <div id="myslider" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myslider" data-slide-to="0" class="active"></li>
@@ -38,3 +39,4 @@
             </a>
         </div>
     </div>
+    </center>

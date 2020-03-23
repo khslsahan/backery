@@ -1,22 +1,10 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Sign Up</title>
-</head>
-<body>
- <?php
-    include("header.php");
-    include_once("connection.php");
-  ?>
+<?php
+    include('top_header.php');
+    echo "<title>Sign Up</title>";
+    include('header.php');
+    include('connection.php');
+?>
   <h1 style="text-align:center">Sign Up</h1>
   <center>
   <div class="box-signup">
@@ -44,6 +32,9 @@
     </div>
   </div>
   <div class="form-row">
+
+      <div class="col-md-2 mb-4">
+      </div>
     <div class="col-md-4 mb-4">
       <label for="validationServer03">Contact no</label>
       <input type="text" class="form-control" id="validationServer03" placeholder="Contact No" name="contact_no" required>
@@ -54,12 +45,7 @@
       <input type="password" class="form-control" id="validationServer04" placeholder="password" name="password" required>
 
     </div>
-    <div class="col-md-4 mb-4">
-      <label for="validationServer05">Role</label>
-      <select class="custom-select" name="role" required>
-      <option value="Customer" selected>Customer</option>
-      <option value="Admin">Admin</option>
-      </select>
+    <div class="col-md-2 mb-4">
     </div>
   </div>
   <div class="form-group">
@@ -71,7 +57,8 @@
 
     </div>
   </div>
-  <button class="btn btn-primary" type="submit" name="submit">Sign Up</button>
+  <button class="btn btn-primary" type="submit" name="submit">Sign up</button>
+  <button class="btn btn-primary" type="reset" name="submit">Clear</button>
 </form>
 <?php
   if(isset($_POST['submit']))
@@ -81,12 +68,11 @@
     $email=$_POST['email'];
     $contact_no=$_POST['contact_no'];
     $password=md5($_POST['password']);
-    $role=$_POST['role'];
     $q1="SELECT * FROM user where email='$email'";
     $que=mysqli_query($conn,$q1);
     if(mysqli_num_rows($que)==0)
     {
-      $query="INSERT INTO user (fname,lname,email,contact_no,password,role) VALUES ('$fname','$lname','$email','$contact_no','$password','$role')";
+      $query="INSERT INTO user (first_name,last_name,email,contact_no,password,role) VALUES ('$fname','$lname','$email','$contact_no','$password','customer')";
       $result=mysqli_query($conn,$query);
       if(!$result)
         die('data not inserted'.mysqli_error($conn));
@@ -106,5 +92,3 @@
     <?php
       include("footer.php")
     ?>
-  </body>
-  </html>

@@ -1,26 +1,13 @@
-.container
-{
-  border:1px solid black;
-  padding:50px;
-  margin:100px;
-  width:60%;
 
-}
-.header
-{
-  padding:10px 20px;
-}
-.jumbotron
-{
-  height:200px;
-  margin-bottom: 0px;
-  size:col-md-3 mb-3;
-}
-.signin-up
-{
-  float:right;
-  margin:0px;
-}
+
+                                                                    /* `======================================`
+                                                                        The html main elements ccs styles
+                                                                    ============================================ */
+                                                                    /*
+                                                                    ==========================================
+                                                                                  start
+                                                                    ========================================== */
+
 body
 {
   background-color:#f6e58d;
@@ -30,10 +17,95 @@ h1
 {
   text-align: center;
 }
+
+h2
+{
+  margin: 10px 0;
+  font-size: 16px;
+  color: gray;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+ul
+{
+  list-style: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+ul a
+{
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  transition: 0.3s;
+}
+ul a:hover
+{
+  color: #ff9800;
+}
+ul li
+{
+  margin: 10px 0;
+  height: 30px;
+}
+li i
+{
+  margin-right: 20px;
+}
+
+
+
+                                                                          /*
+                                                                                  ==========================================
+                                                                                                end = html main elements
+                                                                                  ========================================== */
+
+
+
+                                                                                              /*
+                                                                                              ========================
+                                                                                              header.php styles :start
+                                                                                              ======================== */
+.header
+{
+  padding:10px 20px;
+}
+
+.signin-up
+{
+  float:right;
+  margin:0px;
+}
+
+
+                                                                                              /*
+                                                                                              ========================
+                                                                                              header.php styles :end
+                                                                                              ======================== */
+                                                                                          /*
+                                                                                          ====================================
+                                                                                          map style in: main.php and about.php
+                                                                                          ==================================== */
+
 .map
 {
   margin:20px;
 }
+
+
+                                                                          /*
+                                                                          ====================================
+                                                                          map style in: main.php and about.php ------>end
+                                                                          ==================================== */
+                                                                /*
+                                                                ==========================================
+                                                                              start :footer styls
+                                                                ========================================== */
+
+
+
 .footer
 {
   width: 100%;
@@ -64,46 +136,16 @@ h1
   text-align: justify;
   line-height: 25px;
 }
-h2
-{
-  margin: 10px 0;
-  font-size: 16px;
-  color: gray;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-.border
+
+
+
+
+
+.border-footer
 {
   height: 2px;
   width: 40px;
   background:#ff9800;
-}
-ul
-{
-  list-style: none;
-  color: #fff;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-}
-ul a
-{
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  transition: 0.3s;
-}
-ul a:hover
-{
-  color: #ff9800;
-}
-ul li
-{
-  margin: 10px 0;
-  height: 30px;
-}
-li i
-{
-  margin-right: 20px;
 }
 .socialmedia
 {
@@ -143,6 +185,14 @@ li i
   width: 100%;
   }
 }
+
+
+                                                                /*
+                                                                ==========================================
+                                                                              end :footer styls
+                                                                ========================================== */
+
+
 .box-login
 {
   border:2px solid #2493d3;
@@ -157,6 +207,29 @@ li i
   size:col-md-3 mb-3;
   padding:50px;
 }
+                                                          /*
+                                                                  ==========================================
+                                                                                end :footer styls
+                                                                  ========================================== */
+
+
+
+                                                                          /*
+                                                                          =============================
+                                                                          apout.php :stylesheet -start
+                                                                          ============================= */
+
+.map .about
+{
+  margin:20px;
+}
+
+
+
+                                                                          /*
+                                                                          =============================
+                                                                          apout.php :stylesheet -end
+                                                                          ============================= */
 .box-Items
 {
   border:2px solid #2493d3;
