@@ -28,7 +28,8 @@
 		foodname varchar(30) NOT NULL,
 		catogory varchar(30) NOT NULL,
 		quantity int NOT NULL,
-		price decimal NOT NULL
+		price decimal NOT NULL,
+		image longtext NOT NULL
 	)";
 	$tblfood=mysqli_query($conn,$query) or die ('cannot create table food'.mysqli_error($conn));
 	$query="CREATE TABLE IF NOT EXISTS outlet
