@@ -1,8 +1,14 @@
-<div style="width:100% ; background-color:#222f3e ">
+<div style="width:100% ; background-color:#222f3e">
 <div style="margin-left:10% ; margin-right: 10%;">
 
-<nav class="navbar navbar-expand-lg navbar navbar "  style="background-color:#222f3e " >
-
+<nav class="navbar navbar-expand-lg navbar navbar "  style="background-color:#222f3e">
+  <div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">

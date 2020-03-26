@@ -6,20 +6,20 @@
     include('header.php');
 ?>
 
-<h1>Add products</h1>
+<h1>Add Products</h1>
 <center>
 <div class="box-Items col-md-6 col-sm-12">
-<form action="additem.php" method="post" enctype='multipart/form-data'>
+<form name="addfoods" action="additem.php" method="post" enctype='multipart/form-data' onsubmit="success()">
   <div class="form-group row">
     <label for="inputproductname" class="col-sm-2 col-form-label">Product Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputfoodname" name="productname">
+      <input type="text" class="form-control" id="inputfoodname" name="productname" required>
     </div>
   </div>
   <div class="form-group row">
     <label for="inputquaitity" class="col-sm-2 col-form-label">Quantity</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputquaitity" name="quantity">
+      <input type="text" class="form-control" id="inputquaitity" name="quantity" required>
     </div>
   </div>
   <fieldset class="form-group">
@@ -40,21 +40,22 @@
   <div class="form-group row">
     <label for="inputquaitity" class="col-sm-2 col-form-label">Price Per Unit (Rs.)</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputquaitity" name="price">
+      <input type="text" class="form-control" id="inputquaitity" name="price" required>
     </div>
   </div>
   <div class="form-group row">
     <label for="inputquaitity" class="col-sm-2 col-form-label">Image</label>
     <div class="col-sm-10">
-      <input type="file" name="file" value="Upload Image">
+      <input type="file" name="file" value="Upload Image" required>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-6 ">
-      <button type="reset" name="reset" class="btn btn-primary">Reset</button>
-    </div>
-    <div class="col-6 ">
       <button type="submit" name="submit" class="btn btn-primary">Add Food</button>
+    </div>
+
+    <div class="col-6 ">
+      <button type="reset" name="reset" class="btn btn-primary">Reset</button>
     </div>
   </div>
 </form>
@@ -85,31 +86,51 @@
         {
           // $query="INSERT INTO food (image) VALUES ('.$image.')";
           // mysqli_query($conn,$query);
-          $q1="SELECT * FROM product where product_name='$productname'";
+          $q1="SELECT * FROM products WHERE product_name='$productname'";
           $que=mysqli_query($conn,$q1);
-          if(mysqli_num_rows($que)==0)
+        if(mysqli_num_rows($que)==0)
           {
-            $query="INSERT INTO products (product_name,product_quantity,category_id,	product_price,product_image) VALUES ('$productname',$qty,01,$price,'.$image.')";
+            $query="INSERT INTO products (product_name,product_quantity,category_id,product_price,product_image) VALUES ('$productname',$qty,01,$price,'.$image.')";
             $result=mysqli_query($conn,$query);
             if(!$result)
               die ('data not inserted..!'.mysqli_error($conn));
-            else
-              echo "Food item is inserted Successfully...!";
           }
           else
-            {
+          {
             echo "The given food item is already inserted...!";
-            }
           }
         }
       }
     }
+  }
 
 ?>
 </div>
+<br>
 </center>
 <?php
  include("footer.php");
 ?>
+<script>//give an alert when click submit button
+  function success()
+  {
+    var fields=["productname","quantity","category","price","file"];
+    var i,l=fields.length;
+    var fieldname;
+    for(i=0;i<l;i++)
+    {
+      fieldname=fields[i];
+      if(document.forms["addfoods"][fieldname].value=="")
+      {
+        alert(fieldname + " cannot be empty");
+        return false;
+      }
+      else {
+        alert("Item added Successfully...!");
+        return true;
+      }
+    }
+  }
+</script>
 </body>
 </html>

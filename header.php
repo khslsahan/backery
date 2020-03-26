@@ -8,7 +8,7 @@
             if(isset($_SESSION['login'])&& (($_SESSION['role']=='customer'||$_SESSION['role']=='admin'))){
         ?>
       <div class="signin-up">
-    <a href="<?php  $ad = ($_SESSION['role']=='admin')?"admin.php":"customer.php"; echo $ad;?>"><button type="button" class="btn btn-outline-warning"><i class="icon fa fa-user" style="margin-right:10px;"></i><?php echo "    ".$_SESSION['user_name']; ?></button></a>
+    <a href="<?php  $ad = ($_SESSION['role']=='admin')?"admin.php":"customer.php"; echo $ad;?>"><button type="button" class="btn btn-outline-warning"><i class="icon fa fa-user" style="margin-right:10px;"></i><?php echo "".$_SESSION['user_name']; ?></button></a>
     <a href="logout.php"><button type="button" class="btn btn-outline-warning">Log out</button></a>
       </div>
     <?php }else{ ?>
