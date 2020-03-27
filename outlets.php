@@ -1,6 +1,7 @@
 <?php
     include('top_header.php');
-    echo "<title>Outlets </title>";
+    echo "<title>Outletdetails</title>";
+    include('connection.php');
     include('header.php');
 ?>
 <center>
@@ -10,24 +11,30 @@
               <img src="images\outlets.png" alt="" width="100%" height="100%">
         </div>
 
+
     <div class="row" align="center">
-      <?php  for($x=0 ; $x<9 ; $x++){  ?>
+      <?php
+          $sql = "select * from outlets ";
+          $res=mysqli_query($conn,$sql);
+          if(!$res){
+            die("Error in image".mysqli_error($conn));
+          }
+
+        while($row = mysqli_fetch_assoc($res)){  ?>
     <div class="col-md-4 sm-12">
       <div class="card btn " id="product" style="margin:20px; padding:5px;">
-      <a href="product_details.php">  <img src="images\outlet.jpg" class="card-img-top" alt="..."></a>
+      <a href="product_details.php">  <img src="upload_outlet\<?php echo "".$row['image']; ?>" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <h4><a href="product_details.php">Beautiful Woman Near Showcase With </a></h4>
-          <p class="card-text"><a href="product_details.php">You know what I love getting even more than flowers? Pretty cupcakes. If you want to give your sweetie roses for Valentine’s Day, but don’t want to pay ar
-            tificially high prices, consi .</a></p>
+            <h4><a  style="text-decoration:none" href="product_details.php"><?php echo "".$row['outlet_name']; ?></a></h4>
+          <p class="card-text"><a style="text-decoration:none" href="product_details.php"><?php echo "".$row['outlet_description']; ?></a></p>
             <div class="row">
-                <label class="col-6" ><a href="outlet_details.php?pid=1" ><span class="
+                <label class="col-6" ><a style="text-decoration:none" href="product_details.php?pid=1" ><span class="
                   color: #fff;
-                  text-decoration: none;">price</span></a></label>
-                <label class="col-6"><a href="product_details.php">Rs 500.00/= </a></label>
+                  text-decoration: none;">Mored etails</span></a></label>
+                <label class="col-6"><a style="text-decoration:none" href="product_details.php"><?php echo "".$row['outlet_province']; ?></a></label>
             </div>
             <div class="row">
-              <button class="col-6 btn-primary" type="submit" name="button">Buy</button>
-              <button class="col-6 btn-primary" type="button" name="button">Favorirs</button>
+              <button class=" btn-primary" type="submit" name="button"><i class="icon fa fa-shopping-cart" style="margin-right:10px;"></i>Details</button>
             </div>
         </div>
     </div>

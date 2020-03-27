@@ -8,7 +8,7 @@
 
     <center>
       <div class="col-sm-10">
-        <h2 style="font-size:40px ;color:black;font-weight:normal">The Story</h2>
+        <h2 style="font-size:40px ;color:black;font-weight:normal">The Story  </h2>
         <p>
             The real taste that made from best ingredients from sri lankan taste and provide you the best. All island outlets will always ready to fulfill your needs. Founded on traditions and values that
              are still upheld by all those who fall under the Creative

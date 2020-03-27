@@ -25,21 +25,46 @@
    {
      $email=$_POST['email'];
        $password=md5($_POST['password']);
-     $que="SELECT * FROM user WHERE email='$email' AND password='$password'" or die ('failed to get result'.mysqli_error($conn));
+     $que="SELECT * FROM user WHERE email='$email' AND password='$password'" or die ('failed to get result customer'.mysqli_error($conn));
      $result=mysqli_query($conn,$que);
      $row=mysqli_fetch_assoc($result);
-     print_r($row);
+     // print_r($row);
      if($row['email']==$email && $row['password']==$password && $row['role']=='customer'){
-       $_SESSION['login']=$email;
+
+       $_SESSION['login']=$row['email'];
        $_SESSION['role']=$row['role'];
+       $_SESSION['uid']=$row['id'];
        $_SESSION['user_name']=$row['first_name'];
-       header('location:customer.php');
+       $uip=$_SERVER['REMOTE_ADDR'];
+       $status=1;
+       $que = "insert into `user_log`(user_email,user_ip,role,status) values('$email','$uip','".$row['role']."',$status)" ;
+       $result=mysqli_query($conn,$que);
+       if(!$result){
+         die ('failed to get result userlog  '.mysqli_error($conn));
+       }
+        // header('location:customer.php');
+       echo "<script language='javascript'>
+       document.location='customer.php';
+       </script>";
+
+
      }
      else if($row['email']==$email && $row['password']==$password && $row['role']=='admin'){
        $_SESSION['login']=$email;
        $_SESSION['role']='admin';
+       $_SESSION['uid']=$row['id'];
        $_SESSION['user_name']=$row['first_name'];
-       header('location:admin.php');
+       $uip=$_SERVER['REMOTE_ADDR'];
+       $status=1;
+       $que = "insert into `user_log`(user_email,user_ip,role,status) values('$email','$uip','".$row['role']."',$status)" ;
+       $result=mysqli_query($conn,$que);
+       if(!$result){
+         die ('failed to get result'.mysqli_error($conn));
+       }
+       // header('location:admin.php');
+       echo "<script language='javascript'>
+       document.location='admin.php';
+       </script>";
      }
        else {
          echo "Invalid username or Password ";
@@ -55,11 +80,3 @@
   <?php
    include("footer.php");
   ?>
-
-
-
- <?php
-  include("footer.php");
- ?>
-</body>
-</html>
